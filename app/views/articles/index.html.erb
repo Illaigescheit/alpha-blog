@@ -1,0 +1,29 @@
+<h1>Listing of all articles</h1>
+
+<!--Create new article-->
+<p>
+  <%= link_to "Create new article", new_article_path %>
+</p>
+
+
+<!--A table to present all articles-->
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+  
+<!--Now to present the data from all articles we will use embedded Ruby-->
+
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.description %></td>
+        <td><%= link_to "Edit", edit_article_path(article) %></td>
+        <td><%= link_to "Show", article_path(article) %></td>
+      </tr>
+    <% end %>
+  
+  
+</table>
