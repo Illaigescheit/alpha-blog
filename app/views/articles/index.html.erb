@@ -1,5 +1,12 @@
 <h1 align="center">Listing of all articles</h1>
+<div align="center">
+  <%= will_paginate %>
+</div>
 
 <!--Now to present the data from all articles we will use embedded Ruby-->
 
 <%= render 'article', obj: @articles %>
+
+<div align="center">
+  <%= will_paginate %>
+</div>
