@@ -7,14 +7,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>f
-      <%= link_to "Alpha Blog", root_path, class: "navbar-brand", id: "logo" %>
+      </button>
+      <%= link_to image_tag('logo.png',:size => "180x40") , "http://mobifile.co", class: "navbar-brand", id: "logo" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Articles", articles_path %></li>
+        <li><%= link_to "Posts", articles_path %></li>
         <li><%= link_to "Users", users_path %></li>
         <% if logged_in? %>
           <li class="dropdown">
